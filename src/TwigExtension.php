@@ -291,7 +291,7 @@ class TwigExtension extends \Twig_Extension
         } else {
             $timestamp = $dateTime->getTimestamp();
 
-            return strftime($format, $timestamp);
+            return utf8_encode(strftime($format, $timestamp));
         }
     }
 
